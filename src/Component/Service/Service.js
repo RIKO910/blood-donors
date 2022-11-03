@@ -6,7 +6,7 @@ import p3 from '../../img/scr.jpg'
 const Service = () => {
     return (
         <div class="bg-secondary ">
-            <h1 style={{ fontWeight:"bold" }} class="py-2 mt-4 text-white display-4 font-weight-bold">DONATION PROCESS</h1>
+            <h1 style={{ fontWeight:"bold" }} class="pt-4  text-white display-4 font-weight-bold">DONATION PROCESS</h1>
             <h3 class="font-weight-normal py-4 text-white">The donation process from the time you arrive center until the time you leave</h3>
             <div class="row text-center  text-white">
 			<div class="col-lg-4">
