@@ -1,20 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import { Routes } from 'react-router-dom';
-import Banner from './Component/Banner/Banner';
+import { Route, Routes } from 'react-router-dom';
 import Header from './Component/Header/Header';
-import Service from './Component/Service/Service';
-import Join from './Component/Join/Join';
 import Footer from './Component/Footer/Footer';
+import About from './Component/About/About';
+import Home from './Component/Home/Home';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App  bg-secondary">
       <Header></Header>
-      <Banner></Banner>
-      <Service></Service>
-      <Join></Join>
-      <Footer></Footer>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+      </Routes>
     </div>
   );
 }

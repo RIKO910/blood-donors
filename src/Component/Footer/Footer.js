@@ -2,10 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-           
-            <div class="text-center text-white" style={{ backgroundColor: " white" }}>
-
+            <div class="text-center text-white  " >
                 {/* <div class="container pt-4">
 
                     <div class="mb-4">
@@ -62,16 +59,12 @@ const Footer = () => {
                         ><i class="fab fa-github"></i>
                         </a>
                     </div>
-
                 </div> */}
-
-                <div class="text-center text-dark p-3 my-4" style={{ backgroundColor: "white" }}>
+                <div class="text-center text-dark  p-5" >
                     © 2022 Copyright:
                     <a class="text-dark" href="https://tarikul-islam-riko.netlify.app/">Syed Tarikul Islam</a>
                 </div>
-
-            </div>
-        </div>
+            </div> 
     );
 };
 
