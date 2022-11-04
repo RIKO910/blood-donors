@@ -1,13 +1,39 @@
 import React from 'react';
+import { json } from 'react-router-dom';
 
 const Join = () => {
+    const handelAddUser = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const age = event.target.age.value;
+        const weight = event.target.weight.value;
+        const address = event.target.address.value;
+        const number = event.target.number.value;
+        const blood = event.target.blood.value;
+
+        const users = { name, age, weight, address, number, blood };
+        //send data to the server
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(users),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
+            })
+
+    }
     return (
         <div>
             <div class="container-fluid bg-secondary text-white">
                 <div class="row text-center">
                     <div class="col-lg-12">
-                        <h1 style={{ fontWeight:"bold" }}  class="display-4 mt-4 py-3 font-weight-bold">JOIN US</h1>
-                        <p style={{ fontWeight:"bold" }}  class="font-weight-bold py-3">FEEL THE REAL PEACE</p>
+                        <h1 style={{ fontWeight: "bold" }} class="display-4 mt-4 py-3 font-weight-bold">JOIN US</h1>
+                        <p style={{ fontWeight: "bold" }} class="font-weight-bold py-3">FEEL THE REAL PEACE</p>
 
                     </div>
                 </div>
@@ -21,37 +47,37 @@ const Join = () => {
                             profile/information if in case you relocate in future</p>
 
                     </div>
-                    <form class="">
+                    <form onSubmit={handelAddUser} class="">
                         <div class="container text-center">
 
                             <div className='row'>
-                            <div class="form-group col-md-6">
-                                <input type="name" name="name" id="name" placeholder="Name" class="form-control" />
-                            </div>
+                                <div class="form-group col-md-6">
+                                    <input type="name" name="name" id="name" placeholder="Name" class="form-control" />
+                                </div>
 
-                            <div class="form-group col-md-3">
-                                <input type="text" name="age" id="age" placeholder="Age" class="form-control" min="50"
-                                    max="" />
-                            </div>
+                                <div class="form-group col-md-3">
+                                    <input type="text" name="age" id="age" placeholder="Age" class="form-control" min="50"
+                                        max="" />
+                                </div>
 
-                            <div class="form-group col-md-3">
-                                <input type="text" name="weight" id="weight" placeholder="Weight" class="form-control" />
-                            </div>
+                                <div class="form-group col-md-3">
+                                    <input type="text" name="weight" id="weight" placeholder="Weight" class="form-control" />
+                                </div>
                             </div>
                         </div>
 
                         <div class="form-row container text-center my-4 sm:my-1">
-                           <div className='row'>
-                           <div class="form-group col-md-6">
-                                <input type="text" name="Address" id="address" placeholder="Address" class="form-control" />
-                            </div>
+                            <div className='row'>
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="Address" id="address" placeholder="Address" class="form-control" />
+                                </div>
 
-                            <div class="form-group col-md-3">
-                                <input type="text" name="number" id="number" placeholder="Number" class="form-control"
-                                    maxlength="11" />
-                            </div>
-                            <div class="form-group col-md-3">
-                                <select class="form-control" id="bloodgroup">
+                                <div class="form-group col-md-3">
+                                    <input type="text" name="number" id="number" placeholder="Number" class="form-control" />
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <input type="text" name="blood" id="blood" placeholder="Blood Group" class="form-control" />
+                                    {/* <select class="form-control" id="bloodgroup">
                                     <option selected="">Choose Blood Group</option>
                                     <option>A+</option>
                                     <option>A-</option>
@@ -61,9 +87,9 @@ const Join = () => {
                                     <option>O-</option>
                                     <option>AB+</option>
                                     <option>AB-</option>
-                                </select>
+                                </select> */}
+                                </div>
                             </div>
-                           </div>
                         </div>
 
                         <input type="submit" name="submit" class="btn btn-outline-success btn-lg btn-block" />
