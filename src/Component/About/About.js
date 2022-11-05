@@ -3,9 +3,9 @@ import Footer from '../Footer/Footer';
 import './About.css';
 const About = () => {
     return (
-        <div>
+        <div className='bg-secondary'>
             <section>
-                <div className='mt-5  '>
+                <div className='pt-5  '>
                     <h1 className='text-center text-warning font-bold text-3xl mb-5'>About Me</h1>
                     <div className='text-center'>
                         <img className='riko-image mt-9' src="images/me/profile.jpg" alt="" />

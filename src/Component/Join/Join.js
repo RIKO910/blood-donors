@@ -14,7 +14,7 @@ const Join = () => {
         const users = { name, age, weight, address, number, blood };
         //send data to the server
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://morning-dawn-53839.herokuapp.com/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -24,6 +24,8 @@ const Join = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log('Success:', data);
+                alert('user added successfully!!!!');
+                event.target.reset();
             })
 
     }
