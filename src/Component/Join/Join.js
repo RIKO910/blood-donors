@@ -1,5 +1,6 @@
 import React from 'react';
 import { json } from 'react-router-dom';
+import './Join.css'
 
 const Join = () => {
     const handelAddUser = event => {
@@ -44,9 +45,8 @@ const Join = () => {
                     <div class="card-title text-center">
                         <h3>REGISTRATION FORM</h3>
                         <p class="font-weight-light">Please fill the following information to register as voluntary
-                            blood donor and become part of our vision. Kindly update your date of donation once done, so
-                            that your name will be hidden automatically till next 4 Months. Also please update your
-                            profile/information if in case you relocate in future</p>
+                            blood donor and become part of our vision.  Also please update your
+                            profile/information if in case you relocate in future(Address:- Now: Saidpur ,Then: Dhaka).And if you know your friend's information, fill in the information of your friend</p>
 
                     </div>
                     <form onSubmit={handelAddUser} class="">
@@ -57,7 +57,7 @@ const Join = () => {
                                     <input type="name" name="name" id="name" placeholder="Name" class="form-control" />
                                 </div>
 
-                                <div class="form-group col-md-3">
+                                <div class="form-group middle col-md-3">
                                     <input type="text" name="age" id="age" placeholder="Age" class="form-control" min="50"
                                         max="" />
                                 </div>
@@ -74,7 +74,7 @@ const Join = () => {
                                     <input type="text" name="Address" id="address" placeholder="Address" class="form-control" />
                                 </div>
 
-                                <div class="form-group col-md-3">
+                                <div class="form-group middle col-md-3">
                                     <input type="text" name="number" id="number" placeholder="Number" class="form-control" />
                                 </div>
                                 <div class="form-group col-md-3">

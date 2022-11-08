@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Donors.css'
 
 const Donors = () => {
     const [users, setUsers] = useState([]);
@@ -15,8 +16,8 @@ const Donors = () => {
     // }
     return (
         <div>
-            <h2>Available users: {users.length}</h2>
-            <div class="overflow-x-auto">
+            <h2>Available Donors: {users.length}</h2>
+            <div class=" table overflow-x-auto">
                 <table class="table w-full">
                     <thead>
                         <tr>
