@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div >
-            <Navbar bg="dark" variant="dark">
+        
+            <Navbar sticky='top' bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">BAUST BLOOD DONORS</Navbar.Brand>
                     <Nav className="me-2">
@@ -17,7 +17,7 @@ const Header = () => {
                     </Nav>
                 </Container>
             </Navbar>
-        </div>
+        
     );
 };
 
